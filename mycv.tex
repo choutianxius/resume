@@ -1,0 +1,236 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\customItem}[1]{
+	\item
+		\small{#1\vspace{-2pt}}
+}
+
+\newcommand{\resumeItemHead}[1]{
+	\item\small{\textbf{#1}}
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\customHeading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Tianxiu Zhou} & Email : \href{mailto:choutianxius@gmail.com}{choutianxius@gmail.com}\\
+    & Mobile : +1-3137524309 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+   \resumeSubheading
+      {Texas A\&M University}{College Station, TX}
+      {Master of Computer Science}{August 2023 -- Expected 2025}
+    \resumeSubheading
+      {Tsinghua University}{Beijing, China}
+      {Bachelor of Biological Science, 3.75/4 (20\%)}{August 2019 -- June 2023}
+  \resumeSubHeadingListEnd
+
+
+
+%-----------Self Education---------------
+\section{Online Courses and Certificates}
+
+\resumeSubHeadingListStart
+	\resumeSubItem{UC Berkeley Extension}{\\Data Structures and Algorithms (2 Units, A); Fundamentals of Data Communications and Networking (2 Units, A)}
+%\customHeading{UC Berkeley Extension}	
+%  \resumeItemListStart
+%    \resumeItemHead{Data Structures and Algorithms (2 Units, A)}
+%    {\\Fundamental data structures (arrays, linked lists, stacks, queues, hash tables, trees, tries, graphs, etc.); Algorithms (searching, sorting, tree traversal,dijkstra's algorithm, compression, etc.); Advanced topics (dynamic programming, greedy algorithms, optimization etc.)}
+%    \resumeItemHead{Fundamentals of Data Communications and Networking (2 Units, A)}
+%    {\\Data transmission (transmission media, data sigals, data encoding, data link control, multiplexing, etc.); Communications protocols; LAN and WAN}
+%  \resumeItemListEnd
+
+%\customHeading{Coursera}
+%  \resumeItemListStart
+%    \resumeItem{Certificate of Machine Learning Specialization (Stanford University, DeepLearning.AI)}
+%    {\\Supervised Machine Learning: Regression and Classification; Advanced Learning Algorithms; Unsupervised Learning, Recommenders, Reinforcement Learning}
+%  \resumeItemListEnd
+	\resumeSubItem{Coursera, Machine Learning Specialization (Stanford University, DeepLearning.AI)}{\\Supervised Machine Learning: Regression and Classification; Advanced Learning Algorithms; Unsupervised Learning, Recommenders, Reinforcement Learning\\Certificate: \href{https://coursera.org/share/13b53c6dd10972a5ce1df007eb91b255}{https://coursera.org/share/13b53c6dd10972a5ce1df007eb91b255}}
+%	\resumeItemListStart
+%		\customItem{Supervised Machine Learning: Regression and Classification}
+%		\customItem{Advanced Learning Algorithms}
+%		\customItem{Unsupervised Learning, Recommenders, Reinforcement Learning}
+% 	\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+%-----------Projects-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+
+    \customHeading{cfOmics: Multi-Omics Liquid Biopsy Database and Website}{March 2022 -- July 2023}
+      \resumeItemListStart
+	\customItem{Full stack development of a multipage website to provide data and analytical tools for cell-free multi-omics researchers.}         
+	\customItem{Built the frontend with React.js. Used the react-router library for client-side routing. Designed appearance and layout based on Bootstrap 5. Built custom table components to display extremely large datasets with server-side pagination and sorting functions. Built various chart and form components for running analysis and displaying plots. Configured Webpack to use CDN externals to minimize the built bundle and reduce loading time.}
+	\customItem{Collaborated with fellow students for collecting and processing high-throughput data from biological databases. Built a MySQL database for data storage. Designed table-naming rules to organize the data into different tables.}.
+	\customItem{Built an Express.js backend to provide a RESTful API for directly viewing the datasets. Used Knex for query building.}
+	\customItem{Built a Django backend for the analytical functionalities. Collaborated with fellow students for data analyzing scripts. Used the matplotlib and Plotly libraries for generating HTML plots.}
+	\customItem{Configured CORS policy to prevent malicious usage of API.}
+%		\resumeItem{Deployment}
+	\customItem{Containerized the frontend, Express.js backend, Django backend, and MySQL database using Docker and Docker Compose. Deployed the containerized application on a CentOS server. Configured Apache to provide web access.}
+	\customItem{Helped less experienced junior students learn web development so that they can maintain the website better after my graduation.}
+	\customItem{Website link: \href{https://cfomics.ncrnalab.org}{https://cfomics.ncrnalab.org}}
+	\customItem{Demo source code repo: \href{https://github.com/choutianxius/cfomics}{https://github.com/choutianxius/cfomics}}
+\resumeItemListEnd
+
+
+
+	\customHeading{Tsingxiaotu: Student Librarian Assistant Team Sign-in System}{September 2022}
+	\resumeItemListStart
+		\customItem{Improved a WeChat Miniprogram sign-in tool with the wafer2-client-sdk library. Added 3 new features with WXML, WXSS (WeChat-flavored dialect of HTML and CSS) and JavaScript to enable ask-for-leave records.}
+		\customItem{Added services in a Node.js backend with the wafer-node-sdk and koa libraries. Reduced database load by 50\% by closing and reusing connection pools.}
+		\customItem{Developed a Django authentication server, implemented JWT authentication, and established permission and privilege groups to improve the data security of app users.}
+	\resumeItemListEnd
+
+
+    \customHeading{Campus Football Tournament Management System}{April 2021 -- June 2021}
+      \resumeItemListStart
+		\customItem{Course project of the Tsinghua JAVA and Object-Oriented Programming course.}
+        \customItem{Built a backend application with Spring Boot to provide a REST API for managing simulated football tournaments. Implemented JPA with Hibernate to interact with a MySQL database. Performed unit testing with JUnit.}
+        
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------Researches-----------------
+\section{Researches}
+  \resumeSubHeadingListStart
+
+	\resumeSubheading{Network Dissection of a DQN Agent Playing Super Mario Bros}
+	{Tsinghua Univ.}{Bachelor's Thesis Project}{February 2023 -- June 2023}
+	\resumeItemListStart
+		\customItem{Implemented in PyTorch the double DQN algorithm with the memory buffer structure and memory replay behavior, following the original author's papers (V Mnih et al. and H Van Hasselt et al.).}
+		\customItem{Trained a reinforcement learning agent using game scenes as input to play the Super Mario Bros game on a given in-game level, with the Gym environment.}
+		\customItem{Fine-tuned a semantic segmentation model for segmenting in-game scenes, based on DeepLab V3 ResNet-50.}
+		\customItem{Investigated different layers of units of the DQN agent's underlying network, following David Bau's work, and found units targeting human-understandable concepts in the game scenes.}
+		\customItem{Repo: \href{https://github.com/choutianxius/thuthesis-mario}{https://github.com/choutianxius/thuthesis-mario}}
+	\resumeItemListEnd
+
+	\resumeSubheading{Benchmark for Pretrained Models of the DNA Language}
+	{NLP laboratory, Tsinghua Univ.}{Task design and dataset construction}{June 2022 -- October 2022}
+	\resumeItemListStart
+		\customItem{Did literature research and designed 5 tasks that were relevant to the interests of the biology field. Designed metrics for each task to evaluate the models' potential in understanding the DNA "language".}
+		\customItem{Collected raw data from open-access databases and projects like ENCODE, Gtex and EPDnew. Wrote Python scripts to construct datasets ready to be loaded for PyTorch models for each task.}
+		\customItem{Repo: \href{https://github.com/Panzy-18/dna_benchmark}{https://github.com/Panzy-18/dna\_benchmark}}
+	\resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+
+
+
+%--------Extracurricular Activities------------
+\section{Extracurricular Activities and Awards}
+\resumeSubHeadingListStart
+	\customItem{Served as the Personnel Manager of the student librarian assistant team in Tsinghua University Library, which comprises more than 150 members. Duties included managing members' online accounts (maintaining a MySQL database); scheduling shifts (using Excel) and arranging various events with other members of the team's management board. Also developed Python scripts to automate part of the shift scheduling job and reduced its workload. (February 2022 -- June 2023)}
+	\customItem{Tsinghua University: Academic Excellence Award (2021); Comprehensive Excellence Award (2022).}
+\resumeSubHeadingListEnd
+
+%
+%--------Technical SKILLS------------
+%\section{Technical Skills}
+%\resumeSubHeadingListStart
+%   \resumeSubItem{Languages}{JavaScript, Python, Java, C, HTML, CSS, SQL}
+%	\resumeSubItem{Frameworks}{React.js, Express.js, Spring, Django, Bootstrap5}
+%	\resumeSubItem{Development Tools}{NPM, Git, Docker, Maven, Postman, Nginx}
+%\resumeSubHeadingListEnd
+%--------Technical SKILLS------------
+\section{Skills}
+\resumeSubHeadingListStart
+   \customItem{Have gained ample experience in full-stack web development, especially in frontend development with React.js, backend development with Express.js and Django, and Database management with MySQL.}
+  \customItem{Proficient in utilizing a wide range of software development tools like version control with Git, containerization with Docker, API testing with Postman, and server configuration with Apache or Nginx.}
+  \customItem{Skilled in languages including JavaScript, Python, HTML, CSS and SQL, and comfortable with other languages including Java, C and others.}
+  \customItem{Familiar with machine learning concepts and research in fields of NLP and deep reinforcement learning. Capable of implementing and training models with PyTorch.}
+  \customItem{Always ready to use programming to help solve real-world problems and improve efficiency, and adept at finding such opportunities.}
+  \customItem{Always ready to embrace industry best practices to improve code quality and enhance product security.}
+  \customItem{Always ready to collaborate with a team and share my knowledge with others.}
+\resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
