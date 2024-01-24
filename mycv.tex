@@ -9,7 +9,6 @@
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
-\usepackage{ragged2e}
 % This is a custom font. Try use `updmap` in command line if build fails after installing font package
 \usepackage{fontawesome5}
 
@@ -27,7 +26,7 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.375in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.625in}
+\addtolength{\topmargin}{-.525in}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -44,11 +43,11 @@
 %-------------------------
 % Custom commands
 \newcommand{\myItem}[1]{
-  \item\justifying\small{#1\vspace{-5pt}}
+  \item\raggedright\small{#1\vspace{-5pt}}
 }
 
 \newcommand{\mySecondaryItem}[1]{
-  \item\justifying\small{#1\vspace{-.5pt}}
+  \item\raggedright\small{#1\vspace{-.5pt}}
 }
 
 \newcommand{\twoRowSubHeading}[4]{
@@ -56,7 +55,7 @@
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     \small #3 & \textit{\small #4} \\
-  \end{tabular*}\vspace{-7.5pt}
+  \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\oneRowSubHeading}[2]{
@@ -102,9 +101,9 @@
 \section{Education}
   \subHeadingListStart
    \educationSubHeading
-      {Texas A\&M University}{Master of Computer Science}{August 2023 -- Expected May 2025}
+      {Texas A\&M University}{Master of Computer Science}{Aug 2023 -- Expected May 2025}
     \educationSubHeading
-      {Tsinghua University}{Bachelor of Biological Science}{August 2019 -- June 2023}
+      {Tsinghua University}{Bachelor of Biological Science}{Aug 2019 -- Jun 2023}
   \subHeadingListEnd
 
 
@@ -133,7 +132,9 @@
 \section{Experience}
   \subHeadingListStart
     \twoRowSubHeading
-      {Digital Twin-Based Heat Risk Forecasting Platform}
+      {Digital Twin-Based Heat Risk Forecasting Platform
+        \small \href{https://heat-forecasting.connected-digital-twins.com/}{\faLink}
+      }
       {Texas A\&M Univ.}
       {Full Stack Web \& Mobile Development | \textit{React.js, React Native, TailwindCSS, FastAPI, TypeScript, AWS}}
       {Nov 2023 -- Now}
@@ -151,7 +152,7 @@
         Hosted the website with AWS S3 and CloudFront. Configured DNS with AWS Route53 for secure HTTPS connection.
       }
       \mySecondaryItem{
-        Developed a cross-platform mobile application with React Native and Expo. Implemented Material Design principles for stying. Built a highly performant plotting library with React Native Skia for customized weather forecast graphs.
+        Developed a cross-platform mobile application with React Native and Expo. Implemented Material Design principles for stying. Built a performant plotting library with React Native Skia and D3.js for customized weather forecast graphs.
       }
       \mySecondaryItem{
         Configured automatic building pipeline with Expo and distributed the mobile app on Google Play and Apple App Store.
@@ -159,16 +160,35 @@
     \itemListEnd
 
     \twoRowSubHeading
-      {cfOmics: Multi-Omics Liquid Biopsy Database and Website}
+      {Social Network App for Aggies}
+      {Texas A\&M Univ.}
+      {Java Backend Development | \textit{Spring Boot, Gradle, Redis, MongoDB, Java }}
+      {Sept 2023 -- Nov 2023}
+    \itemListStart
+      \mySecondaryItem{
+        Built a Gradle-managed Java backend application for a social network app with the Spring Boot framework.
+      }
+      \mySecondaryItem{
+        Implemented OOP principles and built the app in multiple layers of separated concerns including models, services, DAO and authentication.
+      }
+      \mySecondaryItem{
+        Configured MongoDB and Redis for data persistence and managed database access with Spring Data.
+      }
+    \itemListEnd
+
+    \twoRowSubHeading
+      {cfOmics: Multi-Omics Liquid Biopsy Database and Website
+        \small \href{https://github.com/choutianxius/cfomics}{\faGithub}
+      }
       {Tsinghua Univ.}
       {Full Stack Web Development | \textit{React.js, Express.js, Django, MySQL, Docker, Apache, Linux}}
-      {March 2022 -- July 2023}
+      {Mar 2022 -- Jul 2023}
     \itemListStart
       \mySecondaryItem{
         Developed a full stack website providing visualization and analytical tools for bioinformatics researchers.
       }         
       \mySecondaryItem{
-        Built an SPA frontend with React.js. Implemented client-side routing with react-router. Integrated Bootstrap 5 with custom CSS rules for styling. Built performant table components to display extremely large datasets with server-side pagination and sorting. Configured Webpack to use CDN externals for minimized bundle size and reduced loading time.
+        Built an SPA frontend with React.js. Implemented client-side routing with react-router. Integrated Bootstrap 5 with custom CSS rules for styling. Built performant table components to display extremely large datasets with server-side pagination and sorting. Configured Webpack to use CDN externals for minimized built bundle size.
       }
       \mySecondaryItem{
         Collaborated with a fellow student to collect and process data from biological literatures. Built a MySQL database to organize and store data. Built an Express.js backend to provide a RESTful API to access the database.
@@ -176,35 +196,30 @@
       \mySecondaryItem{
         Built a Django backend to provide visualization and analysis services. Used the Matplotlib and Plotly libraries to generate pre-rendered HTML plots.
       }
-      \mySecondaryItem{Containerized the frontend and backend services using Docker and Docker Compose. Deployed the containerized application on a CentOS server. Configured Apache to provide web access.}
+      \mySecondaryItem{
+        Containerized the frontend and backend services using Docker and Docker Compose. Deployed the containerized application on a CentOS server. Configured Apache to provide web access.
+      }
+    \itemListEnd
+
+    \twoRowSubHeading
+      {Network Dissection of a DQN Agent Playing Super Mario Bros
+        \small \href{https://github.com/choutianxius/thuthesis-mario}{\faGithub}
+      }
+      {Tsinghua Univ.}
+      {Bachelor's Thesis Project | \textit{PyTorch, Deep Reinforcement Learning, OpenAI Gym, Numpy}}
+      {Feb 2023 -- Jun 2023}
+    \itemListStart
+      \mySecondaryItem{
+        Implemented in PyTorch the double DQN algorithm to train a reinforcement learning agent to beat Super Mario Bros.}
+      \mySecondaryItem{
+        Fine-tuned a semantic segmentation model for segmenting in-game scenes to generate training dataset for the DQN agent, based on DeepLab V3 ResNet-50.
+      }
+      \mySecondaryItem{
+        Examined the correlation between activation of neurons in the DQN network and objects in the input scenes, in an effort to investigate the mechanism of neuron function generation.
+      }
     \itemListEnd
 
 \subHeadingListEnd
-
-
-%-----------Researches-----------------
-\section{Researches}
-  \subHeadingListStart
-    \twoRowSubHeading
-      {Network Dissection of a DQN Agent Playing Super Mario Bros}{Tsinghua Univ.}
-      {Bachelor's Thesis Project}{February 2023 -- June 2023}
-    \itemListStart
-      \mySecondaryItem{Implemented in PyTorch the double DQN algorithm with the memory buffer structure and memory replay behavior, following the original author's papers (V Mnih et al. and H Van Hasselt et al.).}
-      \mySecondaryItem{Trained a reinforcement learning agent using game scenes as input to play the Super Mario Bros game on a given in-game level, with the Gym environment.}
-      \mySecondaryItem{Fine-tuned a semantic segmentation model for segmenting in-game scenes, based on DeepLab V3 ResNet-50.}
-      \mySecondaryItem{Investigated different layers of units of the DQN agent's underlying network, following David Bau's work, and found units targeting human-understandable concepts in the game scenes.}
-      \mySecondaryItem{Repo: \href{https://github.com/choutianxius/thuthesis-mario}{https://github.com/choutianxius/thuthesis-mario}}
-    \itemListEnd
-
-    \twoRowSubHeading
-      {Benchmark for Pretrained Models of the DNA Language}{NLP laboratory, Tsinghua Univ.}
-      {Task design and dataset construction}{June 2022 -- October 2022}
-    \itemListStart
-      \mySecondaryItem{Did literature research and designed 5 tasks that were relevant to the interests of the biology field. Designed metrics for each task to evaluate the models' potential in understanding the DNA "language".}
-      \mySecondaryItem{Collected raw data from open-access databases and projects like ENCODE, Gtex and EPDnew. Wrote Python scripts to construct datasets ready to be loaded for PyTorch models for each task.}
-      \mySecondaryItem{Repo: \href{https://github.com/Panzy-18/dna_benchmark}{https://github.com/Panzy-18/dna\_benchmark}}
-    \itemListEnd
-  \subHeadingListEnd
 
 
 %-------------------------------------------
