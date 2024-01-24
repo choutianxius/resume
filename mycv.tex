@@ -9,6 +9,7 @@
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
+\usepackage{ragged2e}
 % This is a custom font. Try use `updmap` in command line if build fails after installing font package
 \usepackage{fontawesome5}
 
@@ -37,24 +38,24 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-5pt}\raggedright\large\bfseries
+  \vspace{-5pt}\large\bfseries
 }{}{0em}{}[{\color{black} \titlerule[0.5pt] \vspace{-5pt}}]
 
 %-------------------------
 % Custom commands
 \newcommand{\myItem}[1]{
-  \item\small{#1\vspace{-5pt}}
+  \item\justifying\small{#1\vspace{-5pt}}
 }
 
 \newcommand{\mySecondaryItem}[1]{
-  \item\small{#1\vspace{-.5pt}}
+  \item\justifying\small{#1\vspace{-.5pt}}
 }
 
 \newcommand{\twoRowSubHeading}[4]{
   \item
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
-    \textit{\small #3} & \textit{\small #4} \\
+    \small #3 & \textit{\small #4} \\
   \end{tabular*}\vspace{-7.5pt}
 }
 
@@ -131,32 +132,25 @@
 %-----------Projects-----------------
 \section{Experience}
   \subHeadingListStart
-    \oneRowSubHeading{cfOmics: Multi-Omics Liquid Biopsy Database and Website}{March 2022 -- July 2023}
+    \twoRowSubHeading
+      {cfOmics: Multi-Omics Liquid Biopsy Database and Website}{Tsinghua Univ.}
+      {Full Stack Web Development | \textit{React.js, Express.js, Django, MySQL, Docker, Apache}}{March 2022 -- July 2023}
     \itemListStart
-      \mySecondaryItem{Full stack development of a multipage website to provide data and analytical tools for cell-free multi-omics researchers.}         
-      \mySecondaryItem{Built the frontend with React.js. Used the react-router library for client-side routing. Designed appearance and layout based on Bootstrap 5. Built custom table components to display extremely large datasets with server-side pagination and sorting functions. Built various chart and form components for running analysis and displaying plots. Configured Webpack to use CDN externals to minimize the built bundle and reduce loading time.}
-      \mySecondaryItem{Collaborated with fellow students for collecting and processing high-throughput data from biological databases. Built a MySQL database for data storage. Designed table-naming rules to organize the data into different tables.}.
-      \mySecondaryItem{Built an Express.js backend to provide a RESTful API for directly viewing the datasets. Used Knex for query building.}
-      \mySecondaryItem{Built a Django backend for the analytical functionalities. Collaborated with fellow students for data analyzing scripts. Used the matplotlib and Plotly libraries for generating HTML plots.}
-      \mySecondaryItem{Configured CORS policy to prevent malicious usage of API.}
-      \mySecondaryItem{Containerized the frontend, Express.js backend, Django backend, and MySQL database using Docker and Docker Compose. Deployed the containerized application on a CentOS server. Configured Apache to provide web access.}
-      \mySecondaryItem{Helped less experienced junior students learn web development so that they can maintain the website better after my graduation.}
-      \mySecondaryItem{Website link: \href{https://cfomics.ncrnalab.org}{https://cfomics.ncrnalab.org}}
-      \mySecondaryItem{Demo source code repo: \href{https://github.com/choutianxius/cfomics}{https://github.com/choutianxius/cfomics}}
+      \mySecondaryItem{
+        Developed a full stack website providing visualization and analytical tools for bioinformatics researchers.
+      }         
+      \mySecondaryItem{
+        Built an SPA frontend with React.js. Implemented client-side routing with react-router. Integrated Bootstrap 5 with custom CSS rules for styling. Built performant table components to display extremely large datasets with server-side pagination and sorting. Configured Webpack to use CDN externals for minimized bundle size and reduced loading time.
+      }
+      \mySecondaryItem{
+        Collaborated with a fellow student to collect and process data from biological literatures. Built a MySQL database to organize and store data. Built an Express.js backend to provide a RESTful API to access the database.
+      }
+      \mySecondaryItem{
+        Built a Django backend to provide visualization and analysis services. Used the Matplotlib and Plotly libraries to generate pre-rendered HTML plots.
+      }
+      \mySecondaryItem{Containerized the frontend and backend services using Docker and Docker Compose. Deployed the containerized application on a CentOS server. Configured Apache to provide web access.}
     \itemListEnd
 
-    \oneRowSubHeading{Tsingxiaotu: Student Librarian Assistant Team Sign-in System}{September 2022}
-    \itemListStart
-      \mySecondaryItem{Improved a WeChat Miniprogram sign-in tool with the wafer2-client-sdk library. Added 3 new features with WXML, WXSS (WeChat-flavored dialect of HTML and CSS) and JavaScript to enable ask-for-leave records.}
-      \mySecondaryItem{Added services in a Node.js backend with the wafer-node-sdk and koa libraries. Reduced database load by 50\% by closing and reusing connection pools.}
-      \mySecondaryItem{Developed a Django authentication server, implemented JWT authentication, and established permission and privilege groups to improve the data security of app users.}
-    \itemListEnd
-
-    \oneRowSubHeading{Campus Football Tournament Management System}{April 2021 -- June 2021}
-    \itemListStart
-      \mySecondaryItem{Course project of the Tsinghua JAVA and Object-Oriented Programming course.}
-      \mySecondaryItem{Built a backend application with Spring Boot to provide a REST API for managing simulated football tournaments. Implemented JPA with Hibernate to interact with a MySQL database. Performed unit testing with JUnit.}
-    \itemListEnd
   \subHeadingListEnd
 
 
@@ -183,14 +177,6 @@
       \mySecondaryItem{Repo: \href{https://github.com/Panzy-18/dna_benchmark}{https://github.com/Panzy-18/dna\_benchmark}}
     \itemListEnd
   \subHeadingListEnd
-
-
-%--------Extracurricular Activities------------
-\section{Extracurricular Activities and Awards}
-\subHeadingListStart
-	\mySecondaryItem{Served as the Personnel Manager of the student librarian assistant team in Tsinghua University Library, which comprises more than 150 members. Duties included managing members' online accounts (maintaining a MySQL database); scheduling shifts (using Excel) and arranging various events with other members of the team's management board. Also developed Python scripts to automate part of the shift scheduling job and reduced its workload. (February 2022 -- June 2023)}
-	\mySecondaryItem{Tsinghua University: Academic Excellence Award (2021); Comprehensive Excellence Award (2022).}
-\subHeadingListEnd
 
 
 %-------------------------------------------
