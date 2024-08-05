@@ -50,11 +50,11 @@
   \item\raggedright\small{#1\vspace{-.5pt}}
 }
 
-\newcommand{\twoRowSubHeading}[4]{
+\newcommand{\twoRowSubHeading}[5]{
   \item
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \small #3 & \textit{\small #4} \\
+    \textbf{#1} | {#2} & {#3} \\
+    \small{\textit{#4}} & \textit{\small{#5}} \\
   \end{tabular*}\vspace{-5pt}
 }
 
@@ -111,19 +111,19 @@
 \section{Skills}
 \subHeadingListStart
 \myItem{
-  \textbf{Frontend/Cross Platform Development}: React.js, React Native, Next.js, Gatsby.js, TailwindCSS, Bootstrap, TypeScript, JavaScript, CSS, HTML, ESBuild, Webpack, Redux, Zustand, Prototyping with Figma and Penpot
+  \textbf{Frontend Development}: React.js, React Native, Next.js, TailwindCSS, TypeScript, JavaScript, CSS, HTML, Redux
 }
 \myItem{
-  \textbf{Backend Development}: FastAPI, Django, Flask, Spring Boot, Node.js, Express.js, MySQL, PostgreSQL, Redis, MongoDB
+  \textbf{Backend Development}: .NET, FastAPI, Django, Flask, Spring Boot, Node.js, Express.js, MySQL, Redis, AWS
 }
 \myItem{
-  \textbf{General Development Skills}: Git, Docker, AWS services, CI/CD, Postman, Swagger, Nginx, Apache, Linux proficiency
+  \textbf{Professional Development Tools}: Git, Docker, CI/CD, Postman, Swagger, Apache, Nginx, Apache Kafka
 }
 \myItem{
-  \textbf{Programming Languages}: JavaScript, Python, Java, C++, C, SQL, HTML, CSS
+  \textbf{Programming Languages}: TypeScript, JavaScript, C\#, Python, Java, SQL, HTML, CSS
 }
 \myItem{
-  \textbf{Data Science and Machine Learning}: PyTorch, Pandas, Numpy, Xarray, reinforcement learning, D3.js, Matplotlib
+  \textbf{Data Science and Machine Learning}: PyTorch, Pandas, Numpy, Reinforcement Learning, D3.js, Matplotlib
 }
 \subHeadingListEnd
 
@@ -133,9 +133,10 @@
 \subHeadingListStart
 
 \twoRowSubHeading
+{Software Development Intern}
 {Advanced Mobile Automatic Regression Testing}
 {Paycom LLC.}
-{.NET Backend Development | \textit{.NET, GitLab, MySQL, React}}
+{.NET, Docker, GitLab, MySQL, React}
 {May 2024 -- Aug 2024}
 \itemListStart
 \mySecondaryItem{
@@ -144,39 +145,45 @@
 \itemListEnd
 
 \twoRowSubHeading
-{Digital Twin-Based Smart City Platform
+{Research Assistant}
+{Digital Twin-Based Smart City \& Smart Construction Platform
   % \small \href{https://heat-forecasting.connected-digital-twins.com/}{\faLink}
 }
 {Texas A\&M Univ.}
-{Full Stack Web \& Mobile Development | \textit{React.js, React Native, TailwindCSS, FastAPI, TypeScript, AWS}}
+{React.js, Next.js, React Native, TailwindCSS, FastAPI, TypeScript, AWS, Apache Kafka}
 {Nov 2023 -- Now}
 \itemListStart
 \mySecondaryItem{
   Built a FastAPI based Python backend to perform domain specific data analysis and provide a RESTful API.
 }
 \mySecondaryItem{
-  Containerized the backend application with Docker and deployed it with AWS AppRunner. Set up CI/CD with AWS CodeCommit, CodeBuild and CodeDeploy for automatic re-deployment.
+  Containerized the backend application with Docker and deployed it with AWS AppRunner.
 }
 \mySecondaryItem{
-  Built a React.js based SPA website and achieved mobile-first responsive styling with TailwindCSS. Configured customized building workflow with ESBuild and PostCSS.
+  Built a React.js based SPA website for the platform and a Next.js based admin's dashboard site. Achieved mobile-first responsive styling with TailwindCSS.
 }
 \mySecondaryItem{
-  Hosted the website with AWS S3 and CloudFront. Configured DNS with AWS Route53 for secure HTTPS connection.
+  Deployed the SPA web app with AWS S3 and CloudFront. Configured DNS with AWS Route53 for secure HTTPS connection. Deployed the admin's dashboard site with AWS Amplify hosting.
+}
+\mySecondaryItem{
+  Set up CI/CD with AWS CodeCommit, CodeBuild and CodeDeploy for automatic re-deployment of the FastAPI backend, React.js SPA and Next.js app.
 }
 \mySecondaryItem{
   Developed a cross-platform mobile application with React Native and Expo. Implemented Material Design principles for styling. Built a performant plotting library with React Native Skia and D3.js for customized data visualization.
 }
 \mySecondaryItem{
-  Configured automatic building pipeline with Expo and distributed the mobile app on Google Play and Apple App Store.
+  TODO: GPS app and Kafka
 }
+\
 \itemListEnd
 
 \twoRowSubHeading
+{Research Assistant}
 {cfOmics: Multi-Omics Liquid Biopsy Database and Website
   \small \href{https://github.com/choutianxius/cfomics}{\faGithub}
 }
 {Tsinghua Univ.}
-{Full Stack Web Development | \textit{React.js, Express.js, Django, MySQL, Docker, Apache, Linux}}
+{React.js, Express.js, Django, MySQL, Docker, Apache}
 {Mar 2022 -- Jul 2023}
 \itemListStart
 \mySecondaryItem{
@@ -197,11 +204,12 @@
 \itemListEnd
 
 \twoRowSubHeading
+{Bachelor's Thesis Project}
 {Network Dissection of a DQN Agent Playing Super Mario Bros
   \small \href{https://github.com/choutianxius/thuthesis-mario}{\faGithub}
 }
 {Tsinghua Univ.}
-{Bachelor's Thesis Project | \textit{PyTorch, Deep Reinforcement Learning, OpenAI Gym, Numpy}}
+{PyTorch, Deep Reinforcement Learning, OpenAI Gym, Numpy}
 {Feb 2023 -- Jun 2023}
 \itemListStart
 \mySecondaryItem{
