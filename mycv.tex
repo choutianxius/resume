@@ -50,11 +50,11 @@
   \item\raggedright\small{#1\vspace{-.5pt}}
 }
 
-\newcommand{\twoRowSubHeading}[4]{
+\newcommand{\twoRowSubHeading}[5]{
   \item
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \small #3 & \textit{\small #4} \\
+    \textbf{#1} | {#2} & {#3} \\
+    \small{\textit{#4}} & \textit{\small{#5}} \\
   \end{tabular*}\vspace{-5pt}
 }
 
@@ -93,7 +93,9 @@
   \hspace{8pt}
   \faEnvelope\hspace{4pt} \href{mailto:choutianxius@gmail.com}{choutianxius@gmail.com}
   \hspace{8pt}
-  \faLinkedinIn\hspace{4pt} \href{https://www.linkedin.com/in/tianxiu-zhou}{linkedin.com/in/tianxiu-zhou}
+  \faLinkedinIn\hspace{4pt} \href{https://www.linkedin.com/in/tianxiu-zhou}{tianxiu-zhou}
+  \hspace{8pt}
+  \faGithub\hspace{4pt} \href{https://github.com/choutianxius}{choutianxius}
 }
 
 
@@ -111,19 +113,19 @@
 \section{Skills}
 \subHeadingListStart
 \myItem{
-  \textbf{Frontend/Cross Platform Development}: React.js, React Native, Next.js, Gatsby.js, TailwindCSS, Bootstrap, TypeScript, JavaScript, CSS, HTML, ESBuild, Webpack, Redux, Zustand, Prototyping with Figma and Penpot
+  \textbf{Frontend Development}: React.js, React Native, Next.js, TailwindCSS, TypeScript, JavaScript, CSS, HTML, Redux
 }
 \myItem{
-  \textbf{Backend Development}: FastAPI, Django, Flask, Spring Boot, Node.js, Express.js, MySQL, PostgreSQL, Redis, MongoDB
+  \textbf{Backend Development}: .NET, FastAPI, Django, Flask, Spring Boot, Node.js, Express.js, MySQL, Redis, AWS
 }
 \myItem{
-  \textbf{General Development Skills}: Git, Docker, AWS services, CI/CD, Postman, Swagger, Nginx, Apache, Linux proficiency
+  \textbf{Professional Development Tools}: Git, Docker, CI/CD, Postman, Swagger, Apache, Nginx, Apache Kafka
 }
 \myItem{
-  \textbf{Programming Languages}: JavaScript, Python, Java, C++, C, SQL, HTML, CSS
+  \textbf{Programming Languages}: TypeScript, JavaScript, C\#, Python, Java, SQL, HTML, CSS
 }
 \myItem{
-  \textbf{Data Science and Machine Learning}: PyTorch, Pandas, Numpy, Xarray, reinforcement learning, D3.js, Matplotlib
+  \textbf{Data Science and Machine Learning}: PyTorch, Pandas, Numpy, Reinforcement Learning, D3.js, Matplotlib
 }
 \subHeadingListEnd
 
@@ -133,79 +135,98 @@
 \subHeadingListStart
 
 \twoRowSubHeading
-{Advanced Mobile Automatic Regression Testing}
+{Software Development Intern}
+{Advanced Mobile Automated Regression Testing}
 {Paycom LLC.}
-{.NET Backend Development | \textit{.NET, GitLab, MySQL, React}}
+{.NET, Docker, GitLab, MySQL, TypeScript, React.js}
 {May 2024 -- Aug 2024}
 \itemListStart
 \mySecondaryItem{
-  TODO
+  Collaboratively designed a system for automating UI regression tests on remote mobile devices.
+}
+\mySecondaryItem{
+  Developed a .NET Core backend application with the MySQL database to provide a RESTful API for managing test scripts, scheduling and dispatching testing jobs to mobile devices, and persisting test execution results.
+}
+\mySecondaryItem{
+  Implemented dependency injection and the repository pattern in the .NET Core backend project. Implemented unit tests with xUnit and Moq to achieve a full test coverage.
+}
+\mySecondaryItem{
+  Set up GitLab CI pipelines to automatically perform unit testing and linting upon merge requests.
+}
+\mySecondaryItem{
+  Built an SPA frontend for visualizing test scripts, testing jobs and results with React.js and an internal UI library.
+}
+\mySecondaryItem{
+  Containerized the .NET Core backend using Docker and integrated the frontend SPA with Docker multi-stage building.
+}
+\mySecondaryItem{
+  Awarded as one of the MVPs of the Software Development Internship program. 
 }
 \itemListEnd
 
 \twoRowSubHeading
-{Digital Twin-Based Smart City Platform
+{Research Assistant}
+{Digital Twin-Based Smart City \& Smart Construction Platform
   % \small \href{https://heat-forecasting.connected-digital-twins.com/}{\faLink}
 }
 {Texas A\&M Univ.}
-{Full Stack Web \& Mobile Development | \textit{React.js, React Native, TailwindCSS, FastAPI, TypeScript, AWS}}
-{Nov 2023 -- Now}
+{TypeScript, Next.js, React Native, TailwindCSS, FastAPI, Apache Kafka, Redis, AWS}
+{Nov 2023 -- May 2024}
 \itemListStart
 \mySecondaryItem{
   Built a FastAPI based Python backend to perform domain specific data analysis and provide a RESTful API.
 }
 \mySecondaryItem{
-  Containerized the backend application with Docker and deployed it with AWS AppRunner. Set up CI/CD with AWS CodeCommit, CodeBuild and CodeDeploy for automatic re-deployment.
+  Developed a queuing system with Apache Kafka and Redis to asynchronously process data from different sources and persist results in AWS DynamoDB.
 }
 \mySecondaryItem{
-  Built a React.js based SPA website and achieved mobile-first responsive styling with TailwindCSS. Configured customized building workflow with ESBuild and PostCSS.
+  Built both a data visualizing website and an admin's dashboard with TypeScript, Next.js and TailwindCSS.
 }
 \mySecondaryItem{
-  Hosted the website with AWS S3 and CloudFront. Configured DNS with AWS Route53 for secure HTTPS connection.
+  Developed a cross-platform mobile app for data visualization with TypeScript and React Native. Created a performant plotting library with React Native Skia and D3.js for making highly customized charts.
 }
 \mySecondaryItem{
-  Developed a cross-platform mobile application with React Native and Expo. Implemented Material Design principles for styling. Built a performant plotting library with React Native Skia and D3.js for customized data visualization.
+  Deployed the backend and frontend apps with AWS services including ECS, S3, CloudFront, Route53 and Amplify.
 }
 \mySecondaryItem{
-  Configured automatic building pipeline with Expo and distributed the mobile app on Google Play and Apple App Store.
+  Set up CI/CD pipelines with AWS CodeCommit, CodeBuild and CodeDeploy for automatic testing and deployment.
 }
 \itemListEnd
 
 \twoRowSubHeading
+{Research Assistant}
 {cfOmics: Multi-Omics Liquid Biopsy Database and Website
   \small \href{https://github.com/choutianxius/cfomics}{\faGithub}
 }
 {Tsinghua Univ.}
-{Full Stack Web Development | \textit{React.js, Express.js, Django, MySQL, Docker, Apache, Linux}}
+{React.js, Django, MySQL, Docker, Apache}
 {Mar 2022 -- Jul 2023}
 \itemListStart
 \mySecondaryItem{
   Developed a full stack website providing visualization and analytical tools for bioinformatics researchers.
 }
 \mySecondaryItem{
-  Built an SPA frontend with React.js. Implemented client-side routing with react-router. Integrated Bootstrap 5 with custom CSS rules for styling. Built performant table components to display extremely large datasets with server-side pagination and sorting. Configured Webpack to use CDN externals for minimized built bundle size.
+  Built a multi-page frontend with React.js and Bootstrap 5. Implemented client-side routing with React Router Dom.
 }
 \mySecondaryItem{
-  Collaborated with a fellow student to collect and process data from biological literatures. Built a MySQL database to organize and store data. Built an Express.js backend to provide a RESTful API to access the database.
+  Built a Django backend with the MySQL database to perform analysis and provide a RESTful API.
 }
 \mySecondaryItem{
-  Built a Django backend to provide visualization and analysis services. Used the Matplotlib and Plotly libraries to generate pre-rendered HTML plots.
-}
-\mySecondaryItem{
-  Containerized the frontend and backend services using Docker and Docker Compose. Deployed the containerized application on a CentOS server. Configured Apache to provide web access.
+  Containerized the frontend and backend services using Docker Compose and deployed on a CentOS server.
 }
 \itemListEnd
 
 \twoRowSubHeading
+{Bachelor's Thesis Project}
 {Network Dissection of a DQN Agent Playing Super Mario Bros
   \small \href{https://github.com/choutianxius/thuthesis-mario}{\faGithub}
 }
 {Tsinghua Univ.}
-{Bachelor's Thesis Project | \textit{PyTorch, Deep Reinforcement Learning, OpenAI Gym, Numpy}}
+{PyTorch, Deep Reinforcement Learning, OpenAI Gym, Numpy}
 {Feb 2023 -- Jun 2023}
 \itemListStart
 \mySecondaryItem{
-  Implemented in PyTorch the double DQN algorithm to train a reinforcement learning agent to beat Super Mario Bros.}
+  Implemented the double DQN algorithm with PyTorch to train a reinforcement learning agent to beat Super Mario Bros.}
 \mySecondaryItem{
   Fine-tuned a semantic segmentation model for segmenting in-game scenes to generate training dataset for the DQN agent, based on DeepLab V3 ResNet-50.
 }
