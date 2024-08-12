@@ -1,0 +1,23 @@
+name: Build and Deploy
+run-name: Build mycv.tex (on the main) branch into pdf and deploy to Github pages
+
+on: release
+
+jobs:
+  build_and_deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    container:
+      image: my-latex-image
+    steps:
+      - name: Checkout (main branch)
+        uses: actions/checkout@v4
+      - name: Build the latex project with latexmk
+        run: |
+          ./make.sh clean
+          ./make.sh
+          cp mycv.pdf docs/stable.pdf
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
