@@ -1,7 +1,9 @@
 name: Build and Deploy
 run-name: Build mycv.tex (on the main) branch into pdf and deploy to Github pages
 
-on: release
+on:
+  release:
+    types: [published]
 
 jobs:
   build_and_deploy:
@@ -19,9 +21,6 @@ jobs:
 
       - name: Pull texlive/texlive
         run: docker pull texlive/texlive
-
-      - name: Prebuild cleaning
-        run: ./make.sh clean
 
       - name: Build and generate pdf
         run: docker run --rm -v .:/workdir texlive/texlive pdflatex -synctex=1 -interaction=nonstopmode -file-line-error -recorder mycv.tex
