@@ -1,0 +1,35 @@
+name: Build and Deploy
+run-name: Build mycv.tex (on the main) branch into pdf and deploy to Github pages
+
+on: release
+
+jobs:
+  build_and_deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (main branch)
+        uses: actions/checkout@v4
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Pull texlive/texlive
+        run: docker pull texlive/texlive
+
+      - name: Prebuild cleaning
+        run: ./make.sh clean
+
+      - name: Build and generate pdf
+        run: docker run --rm -v .:/workdir texlive/texlive pdflatex -synctex=1 -interaction=nonstopmode -file-line-error -recorder mycv.tex
+
+      - name: Prepare artifact
+        run: rm -rf docs/stable.pdf && cp mycv.pdf docs/stable.pdf
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
