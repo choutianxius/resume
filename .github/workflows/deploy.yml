@@ -1,0 +1,57 @@
+name: Build and Deploy
+run-name: Build mycv.tex (on the main) branch into pdf and deploy to Github pages
+
+on:
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build_and_upload:
+    name: Build and Upload
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (main branch)
+        uses: actions/checkout@v4
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Pull texlive/texlive
+        run: docker pull texlive/texlive
+
+      - name: Build and generate pdf
+        run: docker run --rm -v .:/workdir texlive/texlive pdflatex -synctex=1 -interaction=nonstopmode -file-line-error -recorder mycv.tex
+
+      - name: Prepare artifact
+        run: rm -rf docs/stable.pdf && cp mycv.pdf docs/Tianxiu_Zhou-Resume.pdf
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    name: Deploy
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build_and_upload
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
