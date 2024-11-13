@@ -5,6 +5,8 @@
 - Linkedin: [tianxiu-zhou](https://www.linkedin.com/in/tianxiu-zhou)
 - Github: [choutianxius](https://github.com/choutianxius)
 
+- Location: 1800 Holleman Drive, College Station, TX 77840
+
 ## Education
 
 ## Skills
