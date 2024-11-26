@@ -1,3 +1,19 @@
 {
-  "build": { "dockerfile": "Dockerfile" }
+  "image": "texlive/texlive:latest",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "workbench.colorTheme": "Dracula Theme",
+        "editor.fontFamily": "'Cascadia Code', 'Cascadia Mono', monospace",
+        "editor.fontSize": 16,
+        "files.autoSave": "off",
+        "editor.wordWrap": "on"
+      },
+      "extensions": [
+        "dracula-theme.theme-dracula",
+        "James-Yu.latex-workshop"
+      ]
+    }
+  }
 }
